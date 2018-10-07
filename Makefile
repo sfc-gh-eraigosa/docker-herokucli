@@ -7,7 +7,7 @@ DOCKER_USERNAME ?= $(shell git config --get user.email | sed 's/\(.*\)@\(.*\)/\1
 DOCKER_IMAGE ?= herokucli
 
 .PHONY: build tag push
-default: build
+default: build tag
 
 build:
 	docker build \
