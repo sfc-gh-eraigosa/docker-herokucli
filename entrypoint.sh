@@ -1,8 +1,7 @@
 #!/bin/bash
 
 function init() {
-  echo "touch ~/.netrc"
-  echo "alias heroku='docker run -it --rm --volume \"\$(pwd)\":/workspace --volume \"\${HOME}/.local\":$HOME/.local --volume \"\${HOME}/.cache\":$HOME/.cache --volume \"\${HOME}/.netrc\":$HOME/.netrc ${DOCKER_IMAGE}:${TAG}'"
+  echo "touch ~/.netrc && alias heroku='docker run -it --rm --volume \"\$(pwd)\":/workspace --volume \"\${HOME}/.local\":$HOME/.local --volume \"\${HOME}/.cache\":$HOME/.cache --volume \"\${HOME}/.netrc\":$HOME/.netrc ${DOCKER_IMAGE}:${TAG}'"
 }
 
 function test() {
